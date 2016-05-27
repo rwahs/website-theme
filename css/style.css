@@ -4,10 +4,14 @@
 
  /*GLOBAL OVERRIDES*/
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-p,li,dt,dd,td,th,details,button,form,a{font-family: Raleway;}
+p,li,dt,dd,td,th,details,button,form,a,div{font-family: Raleway, Georgia, serif;}
 .main-container{margin-top: 5px;}
 img {max-width: 100%; height: auto;}
+figcaption{font-style: italic;}
+
+/* navbar for top menu */
+.navbar-inverse {background-color:#0f245c;border-color: #0f245c;}
+.navbar-nav li a{font-family: "News Cycle", "Arial Narrow Bold", sans-serif;font-weight:normal;}
 
 /*top menu for subsites*/
 .subsites-entry{}
@@ -20,65 +24,69 @@ img {max-width: 100%; height: auto;}
 .region-sidebar-second .nav li a{color:#777;}
 
 /*search box*/
-.region-sidebar-second .btn-primary {
-    background-color: #0f245c;
-    border-color: #0f245c;
-}
+.region-sidebar-second .btn-primary {background-color: #0f245c;border-color: #0f245c;}
 
 /*heading for the featured image*/
 .region-sidebar-second .view-header .panel-body{padding:0;}
 .region-sidebar-second .view-header h2{color:#777;font-size:1.2em;margin-top:5px;margin-bottom:5px;}
 
+/*home page slider*/
+.form-group .img-responsive{
+	position: relative;
+	z-index:10;
+}
+/*to create the overlayed text from the CMS*/
+.form-group .slider-caption-heading{
+	z-index:20;
+	position:absolute;
+	margin:25px 0 0 10px;
+	background-color:black;
+	padding:5px;
+}
+.form-group .slider-caption-heading a{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	font-weight:normal;
+	font-size:1.8em;
+	color:white;
+}
+.form-group .slider-caption-text{
+	z-index:25;
+	position:absolute;
+	margin:72px 0 0 10px;
+	background-color:black;
+	padding:5px;
+}
+.form-group .slider-caption-text p{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	font-size:1.1em;
+	color:white;
+}
+/*slider control button*/
+.form-group .views-slideshow-controls-bottom{
+	background-image:url('/sites/default/files/inline-images/slider-controller-bg.png');
+	min-height: 50px;
+	padding:15px 10px;
+}
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_previous a, 
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_pause a, 
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_next a{
+	padding:10px;
+	border: 2px solid #9eb7f9;
+	color:white;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_previous{} 
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_pause{}
+.form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_next{}
 
-/* ANY AREA WITH BG COLOUR WILL BE OVERRIDDEN WITH LESS FORMAT COMING LATER*/
-/* navbar for top menu */
-.navbar-nav{background-color: #0f245c;}
-.navbar-inverse {background-color: #0f245c;border-color: #0f245c;}
-.navbar-nav li a{font-family: "News Cycle", "Arial Narrow Bold", sans-serif;font-weight:normal;}
-
-/* START UNSUSTAINABLE HACKS*/
-
-/*slider overrides - note this is a hack, only works on fixed sizes
-.form-group .view-content {max-height: 290px}
-.form-group .view-content h2{display:none;}
-
-/*END HACKS*/
+/*home page dashboard*/
+.home-image-feature{background-color:#FFF;position: relative;}
+.home-image-feature img{width: 100%}
+.home-image-feature .overlay-logo{position: absolute; width:50%;top:10px; left:25px;}
 
 /*content pages image management*/
 .image-left-float-panel{float:right;margin:10px 0px 10px 20px;}
-figcaption{font-style: italic;}
 .panel .center{margin: auto; text-align:center;}
-
-/*hacks on the drop down menus to make them appear like another site - note only works in desktop and produced for the wireframes
-
-.navbar-inverse li:nth-last-child(1){
-	float:left;
-	margin-left:10px;
-	border:1px solid #AA2222;
-	background-color:#AA2222;
-	/*border radius properties
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-
-}
-.navbar-inverse li:nth-last-child(2){
-	margin-left:301px;
-	border:1px solid #3D5C00;
-	background-color:#3D5C00;
-	/*border radius properties
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-/*now hack the secondary menus so this hack doesn inherit to submenus
-.navbar-inverse li ul li:nth-last-child(1), .navbar-inverse li ul  li:nth-last-child(2){
-	margin-left:5px; border:0; background-color:white;
-}
 
