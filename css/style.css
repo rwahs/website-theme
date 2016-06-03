@@ -90,7 +90,8 @@ p.btn-bg{margin-top:10px;}
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_next{}
 
 /*home page - set blocks to match Magento store in colours and padding*/
-.home-bg {display: flex;margin:15px 0 0 0;}
+.home-bg {margin:15px 0 0 0;}
+.col-md-4 .home-bg, .col-md-8 .home-bg {display: flex;}
 .home-bg .home-image-feature{margin:0 15px 0 0;padding:0;}
 .home-bg .home-image-text{background-color: #13b5ea;margin:0}
 .home-bg .map-image-text{background-color: #00b06c;margin:0 15px 0 0}
