@@ -4,37 +4,84 @@
 
  /*GLOBAL OVERRIDES*/
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-p,li,dt,dd,td,th,details,button,form,a,div{font-family: Raleway, Georgia, serif;}
-.main-container{margin-top: 5px;}
-img {max-width: 100%; height: auto;}
-figcaption{font-style: italic;}
+p,li,dt,dd,td,th,details,button,form,a,div,details{
+	font-family: Raleway, Georgia, serif;
+}
+.main-container{
+	margin-top: 5px;
+}
+img {
+	max-width: 100%; height: auto;
+}
+figcaption{
+	font-style: italic;
+}
+
+/*new typography classes*/
+h2.no-top-padding,
+h3.no-top-padding{
+	margin-top:5px;
+}
+p.btn-bg{
+	margin-top:10px;
+}
 
 /* navbar for top menu */
-.navbar-inverse {background-color:#0f245c;border-color: #0f245c;}
-.navbar-nav li a{font-family: "News Cycle", "Arial Narrow Bold", sans-serif;font-weight:normal;}
+.navbar-inverse{
+	background-color:#0f245c;
+	border-color: #0f245c;
+}
+.navbar-nav li a{
+	font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+	font-weight:normal;
+}
 
 /*top menu for subsites*/
-.subsites-entry{}
-.subsites-entry li.collections{background-color:#FF4519;}
-.subsites-entry li.shop{background-color:#6EB209;}
+.subsites-entry li.collections{
+	background-color:#FF4519;
+}
+.subsites-entry li.shop{
+	background-color:#6EB209;
+}
 
 /*side menu or "utilities menu"*/
-.region-sidebar-second .nav li{border-bottom:1px dotted #ddd;}
-.region-sidebar-second .nav li:last-child{border-bottom:none;margin-bottom:15px;}
-.region-sidebar-second .nav li a{color:#777;}
+.region-sidebar-second .nav li{
+	border-bottom:1px dotted #ddd;
+}
+.region-sidebar-second .nav li:last-child{
+	border-bottom:none;
+	margin-bottom:15px;
+}
+.region-sidebar-second .nav li a{
+	color:#777;
+}
 
 /*search box*/
-.region-sidebar-second .btn-primary {background-color: #0f245c;border-color: #0f245c;}
+.region-sidebar-second .btn-primary{
+	background-color: #0f245c;
+	border-color: #0f245c;
+}
 
 /*heading for the featured image*/
-.region-sidebar-second .view-header .panel-body{padding:0;}
-.region-sidebar-second .view-header h2{color:#777;font-size:1.2em;margin-top:5px;margin-bottom:5px;}
+.region-sidebar-second .view-header .panel-body{
+	padding:0;
+}
+.region-sidebar-second .view-header h2{
+	color:#777;
+	font-size:1.2em;
+	margin-top:5px;
+	margin-bottom:5px;
+}
 
 /*home page slider*/
+.home-slider-group{
+	background-color: #ff7202;
+}
 .form-group .img-responsive{
 	position: relative;
 	z-index:10;
 }
+
 /*to create the overlayed text from the CMS*/
 .form-group .slider-caption-heading{
 	z-index:20;
@@ -63,7 +110,7 @@ figcaption{font-style: italic;}
 }
 /*slider control button*/
 .form-group .views-slideshow-controls-bottom{
-	background-image:url('/sites/default/files/inline-images/slider-controller-bg.png');
+	background-color:#ff7202;
 	min-height: 50px;
 	padding:15px 10px;
 }
@@ -71,22 +118,105 @@ figcaption{font-style: italic;}
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_pause a, 
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_next a{
 	padding:10px;
-	border: 2px solid #9eb7f9;
+	border: 2px solid rgba(0,0,0,0.2);
 	color:white;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
 }
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_previous{} 
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_pause{}
 .form-group .views-slideshow-controls-bottom .views_slideshow_controls_text_next{}
 
-/*home page dashboard*/
-.home-image-feature{background-color:#FFF;position: relative;}
-.home-image-feature img{width: 100%}
-.home-image-feature .overlay-logo{position: absolute; width:50%;top:10px; left:25px;}
+/*home page - set blocks to match Magento store in colours and padding*/
+.home-bg {
+	display: flex;
+	margin:15px 0 0 0;
+}
+.home-bg .home-image-feature{
+	margin:0 15px 0 0;
+	padding:0;
+}
+.home-bg .home-image-text{
+	background-color: #13b5ea;
+	margin:0
+}
+.home-bg .map-image-text{
+	background-color: #00b06c;
+	margin:0 15px 0 0
+}
+.home-bg .map-image-feature{
+	background-color: #efefef;
+	margin:0;
+	padding:0;
+}
+.home-bg .map-image-feature img{
+	width:100%;
+}
+.home-bg .map-image-feature p{
+	font-size: 0.7em;
+}
+.home-bg .map-image-text h2, .home-bg .home-image-text h2,
+.home-bg .map-image-text p, .home-bg .home-image-text p,
+.home-bg .map-image-text li, .home-bg .home-image-text li{
+	color:white;
+}
+.home-bg a.btn-default{
+	background-color: rgba(0,0,0, 0.2);
+	border: 2px solid rgba(0,0,0,0.2);
+	color:white;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+/*home page feature with logo overaly*/
+.home-image-feature img{
+	position: relative; 
+	width: 100%
+}
+.home-image-feature .overlay-logo{
+	position: absolute; 
+	width:50%;
+	top:10px; 
+	left:25px;
+}
+
+/*home page final row*/
+.last-row{
+	margin-top:15px;
+}
+.last-row .panel-info{
+	border-color:#ffba00;
+}
+.last-row .panel-info .panel-heading{
+	border-color:#ffba00;
+	background-color:#ffba00;
+	color:#000;
+}
+.last-row .panel-info .view-content li.list-group-item{
+	margin:5px 15px;
+	border: 1px solid rgba(255,186,0,0.2);
+}
+.last-row .panel-info .view-content li.list-group-item a{
+	font-weight: bold;
+}
 
 /*content pages image management*/
-.image-left-float-panel{float:right;margin:10px 0px 10px 20px;}
-.panel .center{margin: auto; text-align:center;}
+.image-left-float-panel{
+	float:right;
+	margin:10px 0px 10px 20px;
+}
+.panel .center{
+	margin: auto;
+	text-align:center;
+}
+
+
 
