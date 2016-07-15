@@ -27,6 +27,9 @@ p.right{
 	float:right;
 	padding-right:10px;
 }
+p,li,form{
+	color:#555;
+}
 a{
 	color:#0f245c;
 }
@@ -276,6 +279,7 @@ p.btn-bg{
 .region-sidebar-second ul.upcoming-events li a{
 	color:#fff;
 	display: block;
+	margin-left:35px;
 }
 .region-sidebar-second ul.upcoming-events li a:hover{
 	background-color:#020C27;
@@ -294,7 +298,8 @@ p.btn-bg{
 	color:#CCCCCC;
 }
 /*home page slider - change behaviour for desktop only*/
-.carousel-caption h3{
+.carousel-caption h3,
+.carousel-caption p{
 	color:#fff;
 }
 .carousel-caption h3 a{
@@ -387,9 +392,6 @@ p.btn-bg{
 .home-bg .map-image-feature img{
 	width:100%;
 }
-.home-bg .map-image-feature p{
-	font-size: 0.7em;
-}
 .home-bg .map-image-text h2, .home-bg .home-image-text h2,
 .home-bg .map-image-text p, .home-bg .home-image-text p,
 .home-bg .map-image-text li, .home-bg .home-image-text li{
@@ -408,10 +410,32 @@ p.btn-bg{
 	margin-bottom:5px;
 }
 
-/*home page feature with logo overaly*/
 .home-image-feature img{
 	position: relative; 
 	width: 100%
+}
+.home-bg .home-image-text p.image-caption{
+	font-size: 0.7em;
+	position: absolute;
+	bottom: 5px;
+	right: 5px
+}
+@media screen and (max-width: 998px){
+	.home-bg .map-image-text p.image-caption{
+		font-size: 0.7em;
+		position: absolute;
+		bottom: 5px;
+		right: 5px
+	}
+}
+/*place in banner for larger screens (still accessible via the menu for small screens)*/
+@media screen and (min-width: 999px){
+	.home-bg .map-image-text p.image-caption{
+		font-size: 0.7em;
+		position: absolute;
+		bottom: 5px;
+		left: 5px
+	}
 }
 
 /*home page final row*/
