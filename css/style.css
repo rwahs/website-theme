@@ -28,7 +28,7 @@ p.right{
 	padding-right:10px;
 }
 p,li,form{
-	color:#555;
+	color:#333;
 }
 a{
 	color:#0f245c;
@@ -147,7 +147,7 @@ p.btn-bg{
 .region-sidebar-second .nav li:nth-last-child(3),
 .region-sidebar-second .nav li:nth-last-child(4),
 .region-sidebar-second .nav li:nth-last-child(5),
-.region-sidebar-second .nav li:nth-last-child(6),{
+.region-sidebar-second .nav li:nth-last-child(6){
   padding-left:10px;
 }
 .region-sidebar-second .nav li:nth-last-child(1):before{
@@ -526,4 +526,9 @@ p.btn-bg{
 /*now minor tweaks for layout purpose*/
 .extra-padding{
 	padding:0 0 10px 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	.navbar-nav > li > a {
+		font-size: 17px;
+	}
 }
