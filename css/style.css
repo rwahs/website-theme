@@ -31,17 +31,17 @@ p,li,form{
 	color:#333;
 }
 a{
-	color:#0f245c;
+	color:#eb6864;
 }
 a:hover{
-	color:#0f245c;
+	color:#eb6864;
 }
 p a{
-	border-bottom: 1px dotted #8A9CCD;
+	border-bottom: 1px dotted #eb6864;
 }
 p a:hover{
 	text-decoration: none;
-	border-bottom: 1px solid #8A9CCD;
+	border-bottom: 1px solid #eb6864;
 }
 
 
@@ -108,6 +108,8 @@ p.btn-bg{
 }
 .subsites-entry li.active a,
 .subsites-entry li.active a:hover{
+	background:#0f245c;
+	color:#FFF;
 	border-bottom:3px solid #0f245c;
 }
 .subsites-entry li a:hover{
