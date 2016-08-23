@@ -514,6 +514,13 @@ p.btn-bg{
 		text-align: center;
 	}
 }
+.footer-mid-col a{
+	color:#0f245c;
+	border: none;
+}
+.footer-mid-col a:hover{
+	border-color: #0f245c;
+}
 /*place in banner for larger screens (still accessible via the menu for small screens)*/
 @media screen and (min-width: 992px){
 	.footer .footer-logo-block img{
